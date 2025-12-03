@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tienda flora</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="../index.html">Tienda flora</a></div>
+
+        <nav class="header-nav">
+            <ul>
+                <li>
+                <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                <a href="./contacto.html">Contacto</a>
+                </li>
+                <li>
+                <a href="./carrito.html" class="carrito-icono">
+                    🛒 <span id="contador-carrito">0</span>
+                </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <h1 class="titulo-contacto">¡Contacta con Nosotros!</h1>
+            <p>Nos encantaría saber tu opinión. Déjanos tu mensaje y nos comunicaremos pronto.</p>
+        </section>
+
+        <section class="form-section">
+            <form action="https://formspree.io/f/mnnevvvb"
+            method="POST">
+
+            <div class="grupo-input">
+                <label for="nombre">Tu nombre:</label>
+                <input id="nombre" type="text" name="nombre" placeholder="Tu nombre" required>
+                
+                <label for="email">Tu email:</label>
+                <input id="email" type="email" name="email" placeholder="Tu email" required>
+                
+                <label for="telefono">Tu teléfono (opcional):</label>
+                <input id="telefono" type="tel" name="telefono" placeholder="Tu teléfono">
+                
+                <label for="mensaje">Tu mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos tu consulta o comentario..." required></textarea>
+                
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </div>
+            </form>
+        </section>
+    </main>
+
+  </main>
+         
+    <footer>
+        <p>Sitio realizado por Flormq</p>
+    <nav>
+        <ul>
+            <li>Instagram</li>
+            <li>Facebook</li>
+            <li>TikTok</li>
+        </ul>
+    </nav>
+    </footer>
+    <script src= "../js/contacto.js" type="module"></script>
+</body>
+</html>

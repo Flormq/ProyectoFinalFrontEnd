@@ -1,0 +1,582 @@
+/* Importar fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+header {
+    background: linear-gradient(90deg, #ff6b9d 0%, #ffa502 50%, #00d4ff 100%);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo a {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo a:hover {
+    transform: scale(1.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.welcome h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #ff6b9d, #ffa502, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome p {
+    font-size: 1.8rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.productos {
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.productos h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-weight: 800;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+/* Tarjeta de producto */
+.tarjeta-producto,
+.card {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+    border: 3px solid transparent;
+}
+
+.tarjeta-producto:hover,
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    border-color: #ff6b9d;
+}
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-producto:hover .img-container img {
+    transform: scale(1.15);
+}
+
+.etiqueta {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff6b9d;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.etiqueta.destacado {
+    background-color: #ffa502;
+}
+
+.tarjeta-producto h3,
+.card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.tarjeta-producto .descripcion,
+.card .descripcion {
+    padding: 0 1.5rem;
+    color: #666;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.tarjeta-producto .precio,
+.card .precio {
+    padding: 1rem 1.5rem 0;
+    color: #ff6b9d;
+    font-weight: 800;
+    font-size: 2.2rem;
+}
+
+.tarjeta-producto button,
+.card button {
+    margin: 1.5rem;
+    flex: 1;
+}
+
+
+.btn {
+    background: linear-gradient(135deg, #ff6b9d, #ffa502);
+    color: #fff;
+    border: none;
+    padding: 1.2rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+    background: linear-gradient(135deg, #ffa502, #ff6b9d);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+
+.promo {
+    background: linear-gradient(90deg, #00d4ff, #0099ff);
+    padding: 3rem 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+}
+
+.promo h2 {
+    font-size: 2.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.promo p {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+footer {
+    background: linear-gradient(90deg, #333, #555);
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+    font-size: 1.4rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.redes-sociales a {
+    color: #ff6b9d;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+.redes-sociales a:hover {
+    color: #ffa502;
+    text-decoration: underline;
+}
+
+/* Estilos del Carrito */
+#contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.producto-carrito {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+}
+
+.info-producto {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.info-producto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detalles h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.detalles p {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.detalles .precio {
+    color: #ff6b9d;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.btn-eliminar {
+    background: linear-gradient(135deg, #ff6b9d, #ffa502);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-eliminar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+}
+
+.btn-eliminar-carrito {
+    background: linear-gradient(135deg, #ff6b9d, #ffa502);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-eliminar-carrito:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+}
+
+.btn-vaciar-carrito {
+    background: linear-gradient(135deg, #ff6b9d, #ffa502);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-vaciar-carrito:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+}
+
+.carrito-vacio,
+.mensaje-carrito-vacio {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #666;
+    padding: 3rem;
+}
+
+#resumen-carrito {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.resumen-total {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.resumen-total h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.total-items,
+.total-final {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.total-final {
+    border-bottom: none;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: #ff6b9d;
+}
+
+.btn-comprar {
+    background: linear-gradient(135deg, #ff6b9d, #ffa502);
+    color: #fff;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-comprar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+}
+
+/* Responsive para carrito */
+@media (max-width: 768px) {
+    .producto-carrito {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-producto {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-eliminar {
+        width: 100%;
+    }
+}
+
+/* Estilos del Formulario de Contacto */
+.form-section {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grupo-input label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+    padding: 1.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.grupo-input input:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: #ff6b9d;
+    box-shadow: 0 0 10px rgba(255, 107, 157, 0.3);
+}
+
+.grupo-input textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estilos para Página de Carrito */
+#contenedor-carrito {
+    display: grid;
+    gap: 2rem;
+    margin: 3rem 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contenedor-carrito .card {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+#contenedor-carrito img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+#contenedor-carrito h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#contenedor-carrito .precio {
+    font-size: 1.8rem;
+    color: #ff6b9d;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+#resumen-carrito {
+    max-width: 600px;
+    margin: 3rem auto;
+}
