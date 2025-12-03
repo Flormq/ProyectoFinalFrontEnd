@@ -472,8 +472,59 @@ footer p {
     box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
 }
 
-/* Responsive para carrito */
+/* Media Queries Responsive */
+
+/* Tablets y pantallas pequeñas (768px y menores) */
 @media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
+
+    .welcome p {
+        font-size: 1.5rem;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .img-container {
+        height: 200px;
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+    }
+
+    .card .precio {
+        font-size: 1.8rem;
+    }
+
     .producto-carrito {
         flex-direction: column;
         text-align: center;
@@ -486,6 +537,120 @@ footer p {
 
     .btn-eliminar {
         width: 100%;
+    }
+
+    #contenedor-carrito .card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #contenedor-carrito img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+}
+
+/* Móviles (480px y menores) */
+@media (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+
+    header {
+        padding: 1rem 0.5rem;
+    }
+
+    .logo a {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .welcome {
+        padding: 1.5rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .welcome p {
+        font-size: 1.3rem;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .img-container {
+        height: 180px;
+    }
+
+    .card {
+        border-radius: 1rem;
+    }
+
+    .card h3 {
+        padding: 1rem 1rem 0.5rem;
+        font-size: 1.4rem;
+    }
+
+    .card .precio {
+        padding: 0.8rem 1rem 0;
+        font-size: 1.6rem;
+    }
+
+    .card button {
+        margin: 1rem;
+    }
+
+    .btn {
+        padding: 1rem 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .promo {
+        padding: 2rem 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .promo h2 {
+        font-size: 2rem;
+    }
+
+    .promo p {
+        font-size: 1.4rem;
+    }
+
+    #contenedor-carrito .card {
+        grid-template-columns: 1fr;
+    }
+
+    #contenedor-carrito img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #contenedor-carrito h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
     }
 }
 
