@@ -464,12 +464,37 @@ footer p {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
+    flex: 1;
 }
 
 .btn-comprar:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 107, 157, 0.6);
+}
+
+.div-botones {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.btn-vaciar {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 1.5rem 3rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-vaciar:hover {
+    background-color: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
 }
 
 /* Media Queries Responsive */

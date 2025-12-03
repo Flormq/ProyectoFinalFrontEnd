@@ -99,10 +99,25 @@ const renderizarCarrito = () => {
     btnComprar.classList.add("btn-comprar");
     btnComprar.textContent = "Proceder al Pago";
 
+    const btnVaciar = document.createElement("button");
+    btnVaciar.classList.add("btn-vaciar");
+    btnVaciar.textContent = "Vaciar Carrito";
+
+    btnVaciar.addEventListener("click", () => {
+        guardarCarrito([]);
+        mostrarMensaje("Carrito vaciado");
+        renderizarCarrito();
+    });
+
+    const divBotones = document.createElement("div");
+    divBotones.classList.add("div-botones");
+    divBotones.appendChild(btnComprar);
+    divBotones.appendChild(btnVaciar);
+
     divResumen.appendChild(h2);
     divResumen.appendChild(divSubtotal);
     divResumen.appendChild(divTotal);
-    divResumen.appendChild(btnComprar);
+    divResumen.appendChild(divBotones);
 
     resumenCarrito.appendChild(divResumen);
 };
